@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG Pocket Coach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ff9800;
+            text-align: center;
+        }
+
+        .box {
+            background: #2a2a2a;
+            border: 2px solid #ff9800;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            color: #ffb74d;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ff9800;
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #ff9800;
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px 10px 0;
+        }
+
+        button:hover {
+            background: #ffb74d;
+        }
+
+        .error {
+            background: #ff5722;
+            color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .success {
+            background: #4caf50;
+            color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .info {
+            background: #2196f3;
+            color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        #messages {
+            min-height: 50px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .step {
+            background: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <h1>⚡ TCG Pocket Coach</h1>
+
+    <div class="box">
+        <h2>Étape 1: Clé API</h2>
+        <div class="step">1️⃣ Allez sur <a href="https://console.anthropic.com/keys" target="_blank" style="color: #ffb74d;">console.anthropic.com/keys</a></div>
+        <div class="step">2️⃣ Cliquez "Create Key"</div>
+        <div class="step">3️⃣ Copiez la clé (sk-ant-...)</div>
+        <div class="step">4️⃣ Collez ci-dessous</div>
+
+        <label>Votre clé API:</label>
+        <input type="text" id="apiKey" placeholder="sk-ant-XXXXX">
+
+        <button onclick="testAPI()">Tester la clé</button>
+
+        <div id="messages"></div>
+    </div>
+
+    <div class="box hidden" id="uploadBox">
+        <h2>Étape 2: Upload screenshot</h2>
+        <input type="file" id="imageFile" accept="image/*">
+        <button onclick="uploadImage()">Analyser screenshot</button>
+        <div id="uploadMessages"></div>
+    </div>
+
+    <div class="box hidden" id="resultBox">
+        <h2>Résultats</h2>
+        <div id="results"></div>
+        <button onclick="reset()">Analyser un autre</button>
+    </div>
+
+    <script>
+        let apiKey = null;
+
+        function showMessage(msg, type = 'info') {
+            const div = document.getElementById('messages');
+            div.innerHTML = `<div class="${type}">${msg}</div>`;
+        }
+
+        function showUploadMessage(msg, type = 'info') {
+            const div = document.getElementById('uploadMessages');
+            div.innerHTML = `<div class="${type}">${msg}</div>`;
+        }
+
+        async function testAPI() {
+            const key = document.getElementById('apiKey').value.trim();
+
+            if (!key) {
+                showMessage('❌ Entrez votre clé API', 'error');
+                return;
+            }
+
+            if (!key.startsWith('sk-ant-')) {
+                showMessage('❌ Clé invalide! Doit commencer par sk-ant-', 'error');
+                return;
+            }
+
+            showMessage('🔄 Test en cours...', 'info');
+
+            try {
+                const response = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: {
+                        'x-api-key': key,
+                        'content-type': 'application/json',
+                        'anthropic-version': '2023-06-01'
+                    },
+                    body: JSON.stringify({
+                        model: 'claude-3-5-sonnet-20241022',
+                        max_tokens: 10,
+                        messages: [{
+                            role: 'user',
+                            content: 'Test'
+                        }]
+                    })
+                });
+
+                console.log('Response status:', response.status);
+
+                if (response.ok) {
+                    apiKey = key;
+                    localStorage.setItem('apiKey', key);
+                    showMessage('✅ Clé valide! Crédit confirmé!', 'success');
+                    document.getElementById('uploadBox').classList.remove('hidden');
+                } else if (response.status === 401) {
+                    showMessage('❌ Clé API invalide ou expired\n\nVérifiez console.anthropic.com', 'error');
+                } else {
+                    const data = await response.json();
+                    showMessage(`❌ Erreur ${response.status}: ${data.error?.message}`, 'error');
+                }
+            } catch (error) {
+                showMessage(`❌ Erreur: ${error.message}`, 'error');
+                console.error('Error:', error);
+            }
+        }
+
+        async function uploadImage() {
+            const file = document.getElementById('imageFile').files[0];
+            if (!file) {
+                showUploadMessage('❌ Sélectionnez une image', 'error');
+                return;
+            }
+
+            if (!apiKey) {
+                apiKey = localStorage.getItem('apiKey');
+                if (!apiKey) {
+                    showUploadMessage('❌ Validez votre clé API d\'abord', 'error');
+                    return;
+                }
+            }
+
+            showUploadMessage('🔄 Analyse en cours...', 'info');
+
+            try {
+                const reader = new FileReader();
+                reader.onload = async (e) => {
+                    const base64 = e.target.result.split(',')[1];
+                    const mimeType = file.type || 'image/jpeg';
+
+                    // Extraction
+                    const extractRes = await fetch('https://api.anthropic.com/v1/messages', {
+                        method: 'POST',
+                        headers: {
+                            'x-api-key': apiKey,
+                            'content-type': 'application/json',
+                            'anthropic-version': '2023-06-01'
+                        },
+                        body: JSON.stringify({
+                            model: 'claude-3-5-sonnet-20241022',
+                            max_tokens: 300,
+                            messages: [{
+                                role: 'user',
+                                content: [
+                                    {
+                                        type: 'image',
+                                        source: {
+                                            type: 'base64',
+                                            media_type: mimeType,
+                                            data: base64
+                                        }
+                                    },
+                                    {
+                                        type: 'text',
+                                        text: 'Analyse TCG Pocket. JSON: {"myHp":"X","opponentHp":"Y","myActive":"Pokemon"}'
+                                    }
+                                ]
+                            }]
+                        })
+                    });
+
+                    if (!extractRes.ok) {
+                        const err = await extractRes.json();
+                        throw new Error(err.error?.message);
+                    }
+
+                    const extractData = await extractRes.json();
+                    let extracted = {};
+                    try {
+                        extracted = JSON.parse(extractData.content[0].text);
+                    } catch (e) {
+                        extracted = { text: extractData.content[0].text };
+                    }
+
+                    // Analyse
+                    showUploadMessage('⚡ Analyse des coups...', 'info');
+
+                    const analysisRes = await fetch('https://api.anthropic.com/v1/messages', {
+                        method: 'POST',
+                        headers: {
+                            'x-api-key': apiKey,
+                            'content-type': 'application/json',
+                            'anthropic-version': '2023-06-01'
+                        },
+                        body: JSON.stringify({
+                            model: 'claude-3-5-sonnet-20241022',
+                            max_tokens: 400,
+                            messages: [{
+                                role: 'user',
+                                content: `Situation: ${JSON.stringify(extracted)}. Donne 3 meilleurs coups. JSON: {"moves":[{"action":"A","reason":"R","prob":"80%"}]}`
+                            }]
+                        })
+                    });
+
+                    if (!analysisRes.ok) {
+                        const err = await analysisRes.json();
+                        throw new Error(err.error?.message);
+                    }
+
+                    const analysisData = await analysisRes.json();
+                    let analysis = { moves: [] };
+                    try {
+                        analysis = JSON.parse(analysisData.content[0].text);
+                    } catch (e) {
+                        console.log('Parse error:', e);
+                    }
+
+                    // Afficher résultats
+                    displayResults(extracted, analysis);
+                    document.getElementById('uploadBox').classList.add('hidden');
+                    document.getElementById('resultBox').classList.remove('hidden');
+
+                };
+                reader.readAsDataURL(file);
+
+            } catch (error) {
+                showUploadMessage(`❌ ${error.message}`, 'error');
+                console.error('Error:', error);
+            }
+        }
+
+        function displayResults(extracted, analysis) {
+            let html = '<h3>📊 Situation</h3>';
+            html += `<p><strong>Mes HP:</strong> ${extracted.myHp || '?'}</p>`;
+            html += `<p><strong>HP Adversaire:</strong> ${extracted.opponentHp || '?'}</p>`;
+            html += `<p><strong>Mon Pokémon:</strong> ${extracted.myActive || '?'}</p>`;
+
+            html += '<h3 style="color: #ffb74d; margin-top: 20px;">🥇 Meilleurs coups</h3>';
+
+            (analysis.moves || []).slice(0, 3).forEach((move, i) => {
+                html += `<div style="background: #333; padding: 15px; margin: 10px 0; border-left: 3px solid #ff9800;">`;
+                html += `<strong>${['🥇', '🥈', '🥉'][i]} Coup ${i+1}:</strong> ${move.action || '?'}<br>`;
+                html += `<strong>Raison:</strong> ${move.reason || '?'}<br>`;
+                html += `<strong>Probabilité:</strong> ${move.prob || move.probability || '?'}`;
+                html += `</div>`;
+            });
+
+            document.getElementById('results').innerHTML = html;
+        }
+
+        function reset() {
+            document.getElementById('imageFile').value = '';
+            document.getElementById('uploadBox').classList.remove('hidden');
+            document.getElementById('resultBox').classList.add('hidden');
+            document.getElementById('uploadMessages').innerHTML = '';
+        }
+
+        window.addEventListener('load', () => {
+            const saved = localStorage.getItem('apiKey');
+            if (saved) {
+                document.getElementById('apiKey').value = saved;
+                apiKey = saved;
+                document.getElementById('uploadBox').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
