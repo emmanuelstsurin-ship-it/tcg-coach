@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG Pocket Coach ULTRA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #ff9800, #ffb74d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: #ffb74d;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        .upload-zone {
+            border: 3px dashed #ff9800;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 152, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .upload-zone:hover {
+            border-color: #ffb74d;
+            background: rgba(255, 152, 0, 0.1);
+            transform: scale(1.01);
+        }
+
+        .upload-zone.dragover {
+            border-color: #ffb74d;
+            background: rgba(255, 152, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .upload-text {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .spinner {
+            border: 4px solid #333;
+            border-top-color: #ff9800;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .status-text {
+            color: #ffb74d;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .results {
+            display: none;
+        }
+
+        .extracted-info {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #ffb74d;
+        }
+
+        .info-label {
+            color: #ffb74d;
+            font-weight: bold;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #fff;
+            font-size: 1.1em;
+            word-break: break-word;
+        }
+
+        .moves {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .move-card {
+            background: rgba(255, 152, 0, 0.15);
+            border: 2px solid #ff9800;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .move-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 152, 0, 0.25);
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3);
+        }
+
+        .move-rank {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .move-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffb74d;
+        }
+
+        .move-reason {
+            color: #ddd;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .move-details {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .detail-item {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .detail-label {
+            color: #ffb74d;
+            font-weight: bold;
+        }
+
+        .detail-value {
+            color: #fff;
+        }
+
+        .error {
+            background: rgba(255, 87, 34, 0.15);
+            border-left: 4px solid #ff5722;
+            padding: 20px;
+            border-radius: 8px;
+            color: #ffab91;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .api-key-section {
+            background: rgba(255, 152, 0, 0.1);
+            border: 2px solid #ff9800;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .api-key-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #1a1a1a;
+            border: 1px solid #ff9800;
+            border-radius: 6px;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .api-key-input::placeholder {
+            color: #666;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff9800, #ffb74d);
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+        }
+
+        .timer {
+            font-size: 0.9em;
+            color: #ffb74d;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .screenshot-preview {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .screenshot-preview img {
+            max-width: 300px;
+            max-height: 500px;
+            border-radius: 8px;
+            border: 2px solid #ff9800;
+            margin-bottom: 15px;
+        }
+
+        .reset-btn {
+            background: #666;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .reset-btn:hover {
+            background: #777;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .upload-zone {
+                padding: 30px 15px;
+            }
+
+            .moves {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-preview img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ TCG Pocket Coach ULTRA</h1>
+            <p class="subtitle">Analyse de screenshot → Meilleurs coups en 2-3 secondes</p>
+        </header>
+
+        <div class="api-key-section">
+            <h3 style="margin-bottom: 10px;">🔑 Clé API Anthropic</h3>
+            <p style="font-size: 0.9em; color: #ccc; margin-bottom: 10px;">
+                Obtenez votre clé gratuite sur <a href="https://console.anthropic.com/keys" target="_blank" style="color: #ffb74d;">console.anthropic.com</a>
+                (5$ gratuit/mois pour les nouveaux)
+            </p>
+            <input type="password" id="apiKey" class="api-key-input" placeholder="sk-ant-..." />
+            <button onclick="saveApiKey()">Enregistrer la clé</button>
+            <p style="font-size: 0.8em; color: #999; margin-top: 10px;">✅ La clé est sauvegardée localement (jamais envoyée ailleurs)</p>
+        </div>
+
+        <div class="upload-zone" id="uploadZone" onclick="document.getElementById('imageInput').click()">
+            <div class="upload-icon">📸</div>
+            <div class="upload-text">Glisse ou clique pour uploader un screenshot</div>
+            <div class="upload-subtext">PNG, JPG, WebP — Ton TCG Pocket en match</div>
+            <input type="file" id="imageInput" accept="image/*" />
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div class="status-text" id="status">Extraction du screenshot...</div>
+            <div class="timer" id="timer">Temps écoulé: 0s</div>
+        </div>
+
+        <div class="results" id="results">
+            <div class="screenshot-preview" id="previewContainer"></div>
+
+            <div class="extracted-info">
+                <h3 style="margin-bottom: 15px;">🎮 Situation Extraite</h3>
+                <div class="info-row" id="extractedData"></div>
+            </div>
+
+            <h3 style="margin-bottom: 20px; font-size: 1.3em; color: #ffb74d;">🥇 Meilleurs Coups</h3>
+            <div class="moves" id="moves"></div>
+
+            <button class="reset-btn" onclick="reset()">↻ Analyser une autre screenshot</button>
+        </div>
+    </div>
+
+    <script>
+        const uploadZone = document.getElementById('uploadZone');
+        const imageInput = document.getElementById('imageInput');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+        const errorDiv = document.getElementById('error');
+        let startTime = 0;
+        let timerInterval = null;
+
+        // Drag & drop
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                imageInput.files = files;
+                handleImageUpload();
+            }
+        });
+
+        imageInput.addEventListener('change', handleImageUpload);
+
+        function saveApiKey() {
+            const key = document.getElementById('apiKey').value.trim();
+            if (!key) {
+                alert('Veuillez entrer votre clé API');
+                return;
+            }
+            localStorage.setItem('anthropic_api_key', key);
+            alert('✅ Clé API enregistrée !');
+        }
+
+        function getApiKey() {
+            return localStorage.getItem('anthropic_api_key');
+        }
+
+        async function handleImageUpload() {
+            const file = imageInput.files[0];
+            if (!file) return;
+
+            const apiKey = getApiKey();
+            if (!apiKey) {
+                showError('❌ Veuillez d\'abord enregistrer votre clé API Anthropic');
+                return;
+            }
+
+            errorDiv.style.display = 'none';
+            uploadZone.style.display = 'none';
+            loading.style.display = 'block';
+            results.style.display = 'none';
+            startTime = Date.now();
+            startTimer();
+
+            try {
+                // Convertir l'image en base64
+                const reader = new FileReader();
+                reader.onload = async (e) => {
+                    const base64 = e.target.result.split(',')[1];
+                    const mimeType = file.type || 'image/jpeg';
+
+                    // Étape 1: Extraire les infos du screenshot
+                    const extractionPrompt = `Tu es un expert en Pokémon TCG Pocket. Analyse ce screenshot et extrais les informations suivantes:
+
+                    1. **Mes HP**: Combien de points de vie j'ai?
+                    2. **HP Adversaire**: Combien de points de vie a mon adversaire?
+                    3. **Ma Main**: Quelles cartes sont dans ma main? (liste)
+                    4. **Mon Board**: Quel Pokémon est actif? Quels Pokémon sur le banc? Quelles énergies attachées?
+                    5. **Board Adversaire**: Quel Pokémon actif pour l'adversaire? Quels Pokémon sur le banc?
+                    6. **Nombre de Cartes en Deck**: Combien de cartes restent dans mon deck?
+                    7. **Situation Générale**: Quelle est mon avance/retard? (HP, cartes, etc.)
+
+                    Réponds en JSON avec la structure exacte:
+                    {
+                        "myHp": "nombre",
+                        "opponentHp": "nombre",
+                        "myHand": ["carte1", "carte2"],
+                        "myActive": "carte",
+                        "myBench": ["carte1", "carte2"],
+                        "myEnergies": ["énergie1"],
+                        "opponentActive": "carte",
+                        "opponentBench": ["carte1"],
+                        "deckCards": "nombre",
+                        "situation": "description courte"
+                    }`;
+
+                    const extractionResponse = await fetch('https://api.anthropic.com/v1/messages', {
+                        method: 'POST',
+                        headers: {
+                            'x-api-key': apiKey,
+                            'content-type': 'application/json',
+                            'anthropic-version': '2023-06-01'
+                        },
+                        body: JSON.stringify({
+                            model: 'claude-sonnet-4-20250514',
+                            max_tokens: 1000,
+                            messages: [{
+                                role: 'user',
+                                content: [
+                                    {
+                                        type: 'image',
+                                        source: {
+                                            type: 'base64',
+                                            media_type: mimeType,
+                                            data: base64
+                                        }
+                                    },
+                                    {
+                                        type: 'text',
+                                        text: extractionPrompt
+                                    }
+                                ]
+                            }]
+                        })
+                    });
+
+                    if (!extractionResponse.ok) {
+                        const errData = await extractionResponse.json();
+                        throw new Error(`Erreur API: ${errData.error?.message || 'Erreur inconnue'}`);
+                    }
+
+                    const extractionData = await extractionResponse.json();
+                    let extractedInfo = {};
+                    
+                    const responseText = extractionData.content[0].text;
+                    const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+                    
+                    if (jsonMatch) {
+                        try {
+                            extractedInfo = JSON.parse(jsonMatch[0]);
+                        } catch (e) {
+                            console.log('Impossible de parser le JSON, utilisation du texte brut');
+                            extractedInfo = { situation: responseText };
+                        }
+                    } else {
+                        extractedInfo = { situation: responseText };
+                    }
+
+                    // Étape 2: Analyser les meilleurs coups
+                    document.getElementById('status').textContent = 'Analyse des meilleurs coups...';
+
+                    const analysisPrompt = `Tu es un coach stratégique expert en Pokémon TCG Pocket. 
+
+                    Voici la situation extraite:
+                    ${JSON.stringify(extractedInfo, null, 2)}
+
+                    Basé sur cette situation, fournis les 3 MEILLEURS COUPS POSSIBLES dans le prochain tour.
+
+                    Pour chaque coup, explique:
+                    1. L'action précise à faire
+                    2. Pourquoi c'est le meilleur choix maintenant
+                    3. Quels sont les risques et avantages
+                    4. Le setup pour le prochain tour
+
+                    Réponds en JSON avec:
+                    {
+                        "moves": [
+                            {
+                                "rank": 1,
+                                "action": "Description de l'action (ex: 'Attacher l'énergie puis utiliser Hydro Pump')",
+                                "reason": "Pourquoi c'est le meilleur coup",
+                                "winProbability": "80%",
+                                "riskLevel": "Moyen",
+                                "nextTurnSetup": "Ce que tu auras après ce coup"
+                            },
+                            ...
+                        ],
+                        "gameState": "Analyse rapide de ta position (Gagnant, Défensif, etc.)"
+                    }`;
+
+                    const analysisResponse = await fetch('https://api.anthropic.com/v1/messages', {
+                        method: 'POST',
+                        headers: {
+                            'x-api-key': apiKey,
+                            'content-type': 'application/json',
+                            'anthropic-version': '2023-06-01'
+                        },
+                        body: JSON.stringify({
+                            model: 'claude-sonnet-4-20250514',
+                            max_tokens: 2000,
+                            messages: [{
+                                role: 'user',
+                                content: analysisPrompt
+                            }]
+                        })
+                    });
+
+                    if (!analysisResponse.ok) {
+                        const errData = await analysisResponse.json();
+                        throw new Error(`Erreur API: ${errData.error?.message || 'Erreur inconnue'}`);
+                    }
+
+                    const analysisData = await analysisResponse.json();
+                    const analysisText = analysisData.content[0].text;
+                    const analysisMatch = analysisText.match(/\{[\s\S]*\}/);
+                    
+                    let analysisInfo = { moves: [] };
+                    if (analysisMatch) {
+                        try {
+                            analysisInfo = JSON.parse(analysisMatch[0]);
+                        } catch (e) {
+                            console.log('Impossible de parser l\'analyse');
+                        }
+                    }
+
+                    displayResults(extractedInfo, analysisInfo);
+                    stopTimer();
+                };
+                reader.readAsDataURL(file);
+
+            } catch (error) {
+                stopTimer();
+                showError(`❌ Erreur: ${error.message}`);
+                loading.style.display = 'none';
+                uploadZone.style.display = 'block';
+            }
+        }
+
+        function displayResults(extracted, analysis) {
+            loading.style.display = 'none';
+            results.style.display = 'block';
+
+            // Preview image
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                document.getElementById('previewContainer').innerHTML = 
+                    `<img src="${e.target.result}" alt="Screenshot" />`;
+            };
+            reader.readAsDataURL(imageInput.files[0]);
+
+            // Extracted info
+            const extractedHtml = `
+                <div class="info-item">
+                    <div class="info-label">Mes HP</div>
+                    <div class="info-value">${extracted.myHp || '?'}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">HP Adversaire</div>
+                    <div class="info-value">${extracted.opponentHp || '?'}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Pokémon Actif</div>
+                    <div class="info-value">${extracted.myActive || '?'}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Cartes en Main</div>
+                    <div class="info-value">${extracted.myHand?.length || 0} cartes</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">État</div>
+                    <div class="info-value">${extracted.situation || 'Analysé'}</div>
+                </div>
+            `;
+            document.getElementById('extractedData').innerHTML = extractedHtml;
+
+            // Moves
+            const movesHtml = (analysis.moves || []).map((move, i) => `
+                <div class="move-card">
+                    <div class="move-rank">${['🥇', '🥈', '🥉'][i] || '⭐'}</div>
+                    <div class="move-title">Coup ${i + 1}</div>
+                    <div class="move-reason">${move.action || move.title || 'Action'}</div>
+                    <div class="move-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Raison:</span>
+                            <span class="detail-value">${move.reason || 'Optimal'}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Probabilité:</span>
+                            <span class="detail-value">${move.winProbability || '?'}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Risque:</span>
+                            <span class="detail-value">${move.riskLevel || 'Modéré'}</span>
+                        </div>
+                    </div>
+                    <div style="color: #ffb74d; font-size: 0.9em; line-height: 1.5;">
+                        <strong>Prochain tour:</strong> ${move.nextTurnSetup || 'À evaluer'}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('moves').innerHTML = movesHtml;
+        }
+
+        function showError(message) {
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        function reset() {
+            uploadZone.style.display = 'block';
+            results.style.display = 'none';
+            imageInput.value = '';
+            errorDiv.style.display = 'none';
+        }
+
+        function startTimer() {
+            let seconds = 0;
+            timerInterval = setInterval(() => {
+                seconds++;
+                document.getElementById('timer').textContent = `Temps écoulé: ${seconds}s`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        // Vérifier la clé API au chargement
+        window.addEventListener('load', () => {
+            if (getApiKey()) {
+                document.getElementById('apiKey').value = '✓ Clé enregistrée';
+                document.getElementById('apiKey').disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>
