@@ -33,4 +33,4 @@
 - **Outils** : [À REMPLIR]
 
 ## Historique notable
-- [AAAA-MM-JJ] : …
+- ~2025 : ouverture du restaurant à Baillif, Guadeloupe (ouvert depuis plus d'1 an au 2026-10-24)

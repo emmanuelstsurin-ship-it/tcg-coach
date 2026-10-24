@@ -5,7 +5,7 @@
 ## Identité
 - **Prénom** : Emmanuel
 - **Âge / situation** : Chef cuisinier et propriétaire de son restaurant (KARIBBEAN H Food)
-- **Lieu** : [À REMPLIR]
+- **Lieu** : Baillif (97123), Guadeloupe
 
 ## Background
 - **Parcours (études, jobs, projets passés)** : [À REMPLIR]
