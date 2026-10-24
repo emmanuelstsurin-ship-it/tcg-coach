@@ -14,7 +14,7 @@
 - **Expériences business passées (et ce qu'elles ont donné)** : « Japantilles », lancé depuis chez lui (fusion japonais/Antilles probable, à confirmer) — avait bien démarré, arrêté faute de budget
 
 ## Ressources
-- **Temps disponible par semaine pour le business** : [À REMPLIR]
+- **Temps disponible par semaine pour le business** : Au resto de 9h à 22h en continu (13 h/jour). Temps « sur » le business (marketing, chiffres) : quasi nul a priori — à préciser
 - **Budget / cash disponible à investir** : [À REMPLIR]
 - **Runway (combien de mois tu peux tenir)** : [À REMPLIR]
 - **Réseau / audience existante** : [À REMPLIR]
