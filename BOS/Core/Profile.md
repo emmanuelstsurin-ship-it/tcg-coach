@@ -14,7 +14,7 @@
 - **Expériences business passées (et ce qu'elles ont donné)** : « Japantilles », lancé depuis chez lui (fusion japonais/Antilles probable, à confirmer) — avait bien démarré, arrêté faute de budget
 
 ## Ressources
-- **Temps disponible par semaine pour le business** : Ouvert du mardi au dimanche, 9h-22h en continu (~78 h/semaine en cuisine). Lundi = jour des courses. Soirées réservées à sa copine. Temps « sur » le business : quasi nul → chaque action doit tenir en créneaux de 15-30 min (heures creuses à identifier)
+- **Temps disponible par semaine pour le business** : Ouvert du mardi au samedi, 9h-22h en continu (~65 h/semaine en cuisine). Lundi = jour des courses. Dimanche : fermé (à confirmer si temps libre). Soirées réservées à sa copine. Temps « sur » le business : quasi nul → chaque action doit tenir en créneaux de 15-30 min (heures creuses à identifier)
 - **Budget / cash disponible à investir** : [À REMPLIR]
 - **Runway (combien de mois tu peux tenir)** : [À REMPLIR]
 - **Réseau / audience existante** : [À REMPLIR]
