@@ -14,7 +14,7 @@
 - **Expériences business passées (et ce qu'elles ont donné)** : « Japantilles », lancé depuis chez lui (fusion japonais/Antilles probable, à confirmer) — avait bien démarré, arrêté faute de budget
 
 ## Ressources
-- **Temps disponible par semaine pour le business** : Au resto de 9h à 22h en continu (13 h/jour). Temps « sur » le business (marketing, chiffres) : quasi nul a priori — à préciser
+- **Temps disponible par semaine pour le business** : Ouvert du mardi au dimanche, 9h-22h en continu (~78 h/semaine en cuisine). Lundi = jour des courses. Soirées réservées à sa copine. Temps « sur » le business : quasi nul → chaque action doit tenir en créneaux de 15-30 min (heures creuses à identifier)
 - **Budget / cash disponible à investir** : [À REMPLIR]
 - **Runway (combien de mois tu peux tenir)** : [À REMPLIR]
 - **Réseau / audience existante** : [À REMPLIR]
@@ -26,5 +26,5 @@
 ## Style & contraintes
 - **Ce que tu aimes faire** : [À REMPLIR]
 - **Ce que tu détestes faire** : [À REMPLIR]
-- **Contraintes (job, famille, santé, légal…)** : [À REMPLIR]
+- **Contraintes (job, famille, santé, légal…)** : Emploi du temps saturé ; soirées pour sa copine (qui ne travaille pas pour le moment)
 - **Comment tu préfères être coaché (direct, doux, chiffres…)** : [À REMPLIR]
