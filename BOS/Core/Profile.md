@@ -15,8 +15,8 @@
 
 ## Ressources
 - **Temps disponible par semaine pour le business** : Ouvert du mardi au samedi, 9h-22h en continu (~65 h/semaine en cuisine). Lundi = jour des courses. Dimanche : fermé (à confirmer si temps libre). Soirées réservées à sa copine. Temps « sur » le business : quasi nul → chaque action doit tenir en créneaux de 15-30 min (heures creuses à identifier)
-- **Budget / cash disponible à investir** : [À REMPLIR]
-- **Runway (combien de mois tu peux tenir)** : [À REMPLIR]
+- **Budget / cash disponible à investir** : 0 € — rien de côté (2026-10-24)
+- **Runway (combien de mois tu peux tenir)** : 0 — sans ventes, le resto coule immédiatement. ⚠️ Toute action doit être gratuite et rapporter du cash vite
 - **Réseau / audience existante** : [À REMPLIR]
 
 ## Motivation
