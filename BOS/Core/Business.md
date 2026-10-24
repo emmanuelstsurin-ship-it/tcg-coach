@@ -32,6 +32,7 @@
 ## Équipe & outils
 - **Structure** : Emmanuel est ASSOCIÉ (pas seul propriétaire). Associé = son frère, 51 % et président (contrôle le compte bancaire). Emmanuel : 49 %. Le frère a un autre emploi et un enfant en bas âge ; il fait le service mercredi, vendredi soir et samedi ; il se verse 500 €/mois « comme économie »
 - **Équipe** : Emmanuel (chef) + 1 employé. Emmanuel se verse ~900 €/mois (à préciser : 900 € pour lui seul, ou à partager avec l'employé ?)
+- **Comptabilité** : Emmanuel ne sait pas s'il y a un expert-comptable ni si le 1er bilan annuel est sorti (2026-10-24)
 - **Outils** : Caisse SumUp ; appli « Caisse & Marge » (bilan, factures, stock, recettes)
 
 ## Historique notable
