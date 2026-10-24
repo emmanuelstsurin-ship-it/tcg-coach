@@ -25,7 +25,7 @@
 - **Ce que tu veux éviter à tout prix** : Rester enfermé en cuisine 65 h/semaine sans en tirer de patrimoine (déduit, à confirmer)
 
 ## Style & contraintes
-- **Ce que tu aimes faire** : (à compléter)
-- **Ce que tu détestes faire** : (à compléter)
+- **Ce que tu aimes faire** : À l'aise avec l'ordinateur et les outils IA (Claude, etc.)
+- **Ce que tu détestes faire** : Montrer son visage (veut un business « faceless »)
 - **Contraintes (job, famille, santé, légal…)** : Emploi du temps saturé ; soirées pour sa copine (qui ne travaille pas pour le moment)
 - **Comment tu préfères être coaché (direct, doux, chiffres…)** : (à compléter)

@@ -18,4 +18,5 @@
 - **Prochaine action** : Envoyer au frère le message demandant comptable, bilan, relevés et accès en lecture (deadline : lundi 2026-10-26 ; docs pour le 2026-11-01).
 - **Complément (même soir)** : Sur ses 900 €, 500 €/mois vont dans un « chetou » (tontine ?). Loyer 750 €. Courses via le compte de l'entreprise. Mariage le 2027-07-21 : salle ~6 000 €, 1 000 € versés.
 - **Correction** : Emmanuel se verse 1 400 €/mois au total (900 pour vivre + 500 au chetou). Pas de déficit pour le loyer. Rémunération du frère à reconfirmer.
+- **Nouvelle envie** : Emmanuel veut créer un business annexe rentable, en ligne, sans montrer son visage. Reco BOS : d'abord récupérer sa part du resto (49 % d'un bénéfice estimé ~4,5 k€), puis on explore le business annexe.
 - **Humeur / énergie** : Fatigué (message à 1h35 du matin), mais clair et motivé par le projet de maison et de liberté.

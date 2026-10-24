@@ -10,6 +10,7 @@
 - [ ] Préparer une réunion d'associés : règle de rémunération selon le temps travaillé et les parts
 
 ## 🧊 Plus tard
+- [ ] Envie exprimée le 2026-10-24 : créer un business annexe rentable, en ligne, sans montrer son visage, sur ses petits créneaux → session « find » une fois les chiffres du resto obtenus
 - [ ] Libérer du temps en cuisine (délégation, préparation en avance)
 - [ ] Constituer une réserve de trésorerie
 
