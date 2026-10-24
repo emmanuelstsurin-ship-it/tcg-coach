@@ -2,21 +2,22 @@
 
 > Les problèmes de ton business, classés par impact. Le n°1 est LE bottleneck : tant qu'il n'est pas réglé, le reste attend.
 
-**Dernier diagnostic** : [AAAA-MM-JJ]
+**Dernier diagnostic** : 2026-10-24 (onboarding)
 
 ## 🎯 Bottleneck actuel
-- **Problème** : [À REMPLIR]
-- **Maillon de la chaîne** : [Trafic / Conversion / Offre / Livraison / Rétention / Mindset / Modèle]
-- **Preuve (chiffres)** : [À REMPLIR]
-- **Skill qui le traite** : [À REMPLIR]
-- **Critère de résolution** : [À quel chiffre on considère que c'est réglé]
+- **Problème** : Aucune visibilité sur les vrais chiffres. Emmanuel n'a pas accès au compte bancaire, ne sait pas s'il y a un comptable ni un bilan, et l'argent ne remonte pas aux associés
+- **Maillon de la chaîne** : Modèle / gestion financière (pas le trafic : les ventes sont là)
+- **Preuve (chiffres)** : CA estimé ~15,6 k€ HT/mois, bénéfice estimé 4 514 €/mois (simulateur). Versé aux associés : 1 400 €/mois (900 + 500). Écart d'environ 3 100 €/mois non expliqué. Trésorerie perso : 0 €. Emmanuel est à ~3,50 €/h
+- **Skill qui le traite** : diagnosis (version finance), puis chase/digestion selon ce qu'on trouve
+- **Critère de résolution** : Emmanuel a en main le bilan ou 3 mois de relevés, le contact du comptable, et un accès en lecture au compte ; on sait où vont les ~3 100 €/mois
 
 ## Autres problèmes (par impact décroissant)
 | # | Problème | Maillon | Impact (1-10) | Statut |
 |---|---|---|---|---|
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 2 | Emmanuel fait 65 h/semaine en cuisine, aucun temps pour piloter le business | Livraison / Digestion | 8 | Ouvert |
+| 3 | Gouvernance : frère à 51 % + président, présent 3 services/semaine ; pas de règle claire de partage | Modèle | 8 | Ouvert |
+| 4 | Zéro réserve de trésorerie : la moindre baisse fait couler le resto | Modèle | 7 | Ouvert |
+| 5 | Chiffres incohérents : ~90 ventes/jour annoncées vs 46/jour dans le simulateur | Mesure | 5 | Ouvert |
 
 ## Bottlenecks résolus
-- [AAAA-MM-JJ] : …
+- (aucun pour l'instant)

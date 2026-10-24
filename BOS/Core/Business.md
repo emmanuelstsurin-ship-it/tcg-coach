@@ -3,7 +3,7 @@
 > L'état vivant de ton business. BOS met à jour ce fichier dès qu'un chiffre change.
 
 **Dernière mise à jour** : 2026-10-24
-**Stade** : 3. Croissance par le CA (~15-17 k€/mois), mais 0 € de trésorerie et le chef fait tout → à confirmer
+**Stade** : 3. Croissance par le CA (~15-17 k€/mois), mais l'argent ne remonte pas aux associés : priorité = clarifier les finances avant de croître
 
 ## L'offre
 - **Ce que tu vends** : Restaurant familial traditionnel haïtien — KARIBBEAN H Food
@@ -13,8 +13,8 @@
 - **Format de livraison** : Surtout à emporter ; petite salle de 4 tables de 2
 
 ## Acquisition
-- **Canal principal** : [À REMPLIR]
-- **Autres canaux** : [À REMPLIR]
+- **Canal principal** : (à compléter)
+- **Autres canaux** : (à compléter)
 
 ## Métriques clés
 | Métrique | Valeur actuelle | Date |

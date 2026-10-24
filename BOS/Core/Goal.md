@@ -1,9 +1,10 @@
 # Objectif
 
 ## L'objectif
-- **Objectif chiffré** : [ex : 5 000 €/mois de CA récurrent]
-- **Deadline** : [AAAA-MM-JJ]
-- **Point de départ** : [ex : 800 €/mois au 2026-01-01]
+- **Objectif chiffré (90 jours)** : Se verser 1 500 €/mois (contre 900 € aujourd'hui)
+- **Deadline** : 2027-01-31
+- **Objectif 12 mois** : à définir
+- **Point de départ** : 900 €/mois pour ~65 h/semaine, au 2026-10-24
 
 ## Pourquoi
 - **Pourquoi cet objectif compte pour toi** : Faire du resto un tremplin pour ne plus travailler 13 h/jour
@@ -12,6 +13,6 @@
 ## Jalons
 | Jalon | Cible | Date visée | Statut |
 |---|---|---|---|
-| 1 | | | ⏳ |
-| 2 | | | ⏳ |
-| 3 | | | ⏳ |
+| 1 | Avoir les vrais chiffres (bilan, relevés, comptable) + accès en lecture au compte | 2026-11-01 | ⏳ |
+| 2 | Réunion d'associés avec ton frère : règle de rémunération claire | 2026-11-30 | ⏳ |
+| 3 | Rémunération Emmanuel à 1 500 €/mois | 2027-01-31 | ⏳ |
