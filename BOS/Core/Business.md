@@ -2,11 +2,11 @@
 
 > L'état vivant de ton business. BOS met à jour ce fichier dès qu'un chiffre change.
 
-**Dernière mise à jour** : [AAAA-MM-JJ]
+**Dernière mise à jour** : 2026-10-24
 **Stade** : [0. Idée / 1. Validation / 2. Traction / 3. Croissance / 4. Scale]
 
 ## L'offre
-- **Ce que tu vends** : [À REMPLIR]
+- **Ce que tu vends** : Restaurant familial traditionnel haïtien — KARIBBEAN H Food
 - **À qui (client idéal)** : [À REMPLIR]
 - **Problème résolu / résultat promis** : [À REMPLIR]
 - **Prix** : [À REMPLIR]

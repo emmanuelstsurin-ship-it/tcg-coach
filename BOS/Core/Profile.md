@@ -3,8 +3,8 @@
 > Rempli par BOS pendant l'onboarding. Mis à jour quand ta situation change.
 
 ## Identité
-- **Prénom** : [À REMPLIR]
-- **Âge / situation** : [À REMPLIR]
+- **Prénom** : Emmanuel
+- **Âge / situation** : Chef cuisinier et propriétaire de son restaurant (KARIBBEAN H Food)
 - **Lieu** : [À REMPLIR]
 
 ## Background
