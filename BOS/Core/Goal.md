@@ -3,6 +3,7 @@
 ## L'objectif
 - **Objectif chiffré (90 jours)** : Se verser 1 500 €/mois (contre 900 € aujourd'hui)
 - **Deadline** : 2027-01-31
+- **Échéance perso clé** : mariage le 2027-07-21 (reste ~5 000 € à payer pour la salle)
 - **Objectif 12 mois** : à définir
 - **Point de départ** : 900 €/mois pour ~65 h/semaine, au 2026-10-24
 

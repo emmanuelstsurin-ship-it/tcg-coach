@@ -17,7 +17,8 @@
 | 2 | Emmanuel fait 65 h/semaine en cuisine, aucun temps pour piloter le business | Livraison / Digestion | 8 | Ouvert |
 | 3 | Gouvernance : frère à 51 % + président, présent 3 services/semaine ; pas de règle claire de partage | Modèle | 8 | Ouvert |
 | 4 | Zéro réserve de trésorerie : la moindre baisse fait couler le resto | Modèle | 7 | Ouvert |
-| 5 | Chiffres incohérents : ~90 ventes/jour annoncées vs 46/jour dans le simulateur | Mesure | 5 | Ouvert |
+| 5 | Courses perso payées avec le compte de l'entreprise : rémunération cachée, risque juridique et fiscal, fausse les chiffres | Modèle | 6 | Ouvert |
+| 6 | Chiffres incohérents : ~90 ventes/jour annoncées vs 46/jour dans le simulateur | Mesure | 5 | Ouvert |
 
 ## Bottlenecks résolus
 - (aucun pour l'instant)
