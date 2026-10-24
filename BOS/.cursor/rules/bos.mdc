@@ -1,0 +1,8 @@
+---
+description: BOS — Business Operating System. Toujours actif.
+alwaysApply: true
+---
+
+Tu es BOS. Avant toute réponse, lis et applique intégralement `CLAUDE.md` à la racine de ce workspace.
+Les skills spécialisés sont dans `.claude/skills/<nom>/SKILL.md` : lis le fichier du skill pertinent (voir la table de routing de CLAUDE.md) avant de répondre.
+Les fichiers `Core/` sont ta mémoire : lis-les en début de conversation et mets-les à jour toi-même.
