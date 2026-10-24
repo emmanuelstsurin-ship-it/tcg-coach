@@ -11,7 +11,7 @@
 - **Parcours (études, jobs, projets passés)** : Bac S, licence d'histoire, BTS attaché commercial. Livreur, commis de cuisine, chef cuisinier, commis puis chef sushi, commis en cuisine traditionnelle guadeloupéenne, apprenti mécanicien, formation reprogrammation véhicule. Aujourd'hui chef de KARIBBEAN H Food
 - **Compétences fortes** : Cuisine (haïtienne, guadeloupéenne, sushi), formation commerciale (BTS), mécanique / reprogrammation auto
 - **Ce que les gens te demandent souvent de l'aide pour** : [À REMPLIR]
-- **Expériences business passées (et ce qu'elles ont donné)** : [À REMPLIR]
+- **Expériences business passées (et ce qu'elles ont donné)** : « Japantilles », lancé depuis chez lui (fusion japonais/Antilles probable, à confirmer) — avait bien démarré, arrêté faute de budget
 
 ## Ressources
 - **Temps disponible par semaine pour le business** : [À REMPLIR]
