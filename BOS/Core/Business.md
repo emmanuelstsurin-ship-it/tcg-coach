@@ -29,7 +29,7 @@
 | Marge | Brute 74 % (11 515 €), EBE 5 546 €, bénéfice net 4 514 €/mois (28,9 %) selon simulateur. Point mort : 23 ventes/jour. Mais 0 € de côté → incohérence à creuser. ⚠️ Emmanuel N'A PAS ACCÈS au compte bancaire du resto | 2026-10-24 |
 
 ## Équipe & outils
-- **Structure** : Emmanuel est ASSOCIÉ (pas seul propriétaire). Un autre associé gère vraisemblablement le compte bancaire — identité, parts et rôle à préciser
+- **Structure** : Emmanuel est ASSOCIÉ (pas seul propriétaire). Associé = son frère, 51 % et président (contrôle le compte bancaire). Emmanuel : 49 %. Rôle opérationnel du frère et sa rémunération à préciser
 - **Équipe** : Emmanuel (chef) + 1 employé. Emmanuel se verse ~900 €/mois (à préciser : 900 € pour lui seul, ou à partager avec l'employé ?)
 - **Outils** : Caisse SumUp ; appli « Caisse & Marge » (bilan, factures, stock, recettes)
 
