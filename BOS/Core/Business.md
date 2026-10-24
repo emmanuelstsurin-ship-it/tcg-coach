@@ -26,10 +26,10 @@
 | Panier moyen | ~17 € | 2026-10-24 |
 | Coût d'acquisition client (CAC) | | |
 | Taux de rétention / churn | | |
-| Marge | Brute 74 % (11 515 €), EBE 5 546 €, bénéfice net 4 514 €/mois (28,9 %) selon simulateur. Point mort : 23 ventes/jour. Mais 0 € de côté → incohérence à creuser | 2026-10-24 |
+| Marge | Brute 74 % (11 515 €), EBE 5 546 €, bénéfice net 4 514 €/mois (28,9 %) selon simulateur. Point mort : 23 ventes/jour. Mais 0 € de côté → incohérence à creuser. ⚠️ Emmanuel N'A PAS ACCÈS au compte bancaire du resto | 2026-10-24 |
 
 ## Équipe & outils
-- **Équipe** : [À REMPLIR]
+- **Équipe** : Emmanuel (chef) + 1 employé. Emmanuel se verse ~900 €/mois (à préciser : 900 € pour lui seul, ou à partager avec l'employé ?)
 - **Outils** : Caisse SumUp ; appli « Caisse & Marge » (bilan, factures, stock, recettes)
 
 ## Historique notable
