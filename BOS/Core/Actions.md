@@ -3,7 +3,7 @@
 > Priorisé par levier. Une seule action en « Maintenant » idéalement, trois maximum.
 
 ## 🔥 Maintenant
-- [ ] Lister 50 restaurateurs / food trucks de Guadeloupe — deadline : lundi 2026-10-26 — critère : tableau rempli dans Output/2026-10-24_test-validation.md
+- [ ] Vérifier la liste de 53 restos / food trucks pré-remplie par BOS (encore ouverts ? contact Facebook/Insta) — deadline : lundi 2026-10-26 — critère : au moins 20 contacts trouvés
 - [ ] Envoyer le message d'approche à 20 d'entre eux — deadline : mercredi 2026-10-28 — critère : 20 envois
 
 ## ⏭️ Ensuite
