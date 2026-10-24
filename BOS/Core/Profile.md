@@ -20,8 +20,8 @@
 - **Réseau / audience existante** : [À REMPLIR]
 
 ## Motivation
-- **Pourquoi tu fais ça (le vrai pourquoi)** : [À REMPLIR]
-- **Ce que tu veux éviter à tout prix** : [À REMPLIR]
+- **Pourquoi tu fais ça (le vrai pourquoi)** : Le resto = un tremplin pour ne plus travailler comme maintenant (13 h/jour), investir, acheter une maison, gagner de la liberté financière
+- **Ce que tu veux éviter à tout prix** : Rester enfermé en cuisine 65 h/semaine sans en tirer de patrimoine (déduit, à confirmer)
 
 ## Style & contraintes
 - **Ce que tu aimes faire** : [À REMPLIR]
