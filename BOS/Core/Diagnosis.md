@@ -20,5 +20,8 @@
 | 5 | Courses perso payées avec le compte de l'entreprise : rémunération cachée, risque juridique et fiscal, fausse les chiffres | Modèle | 6 | Ouvert |
 | 6 | Chiffres incohérents : ~90 ventes/jour annoncées vs 46/jour dans le simulateur | Mesure | 5 | Ouvert |
 
+## Business annexe
+- **Bottleneck** : Validation (0 client payant). Résolu à 3 paiements ou acomptes
+
 ## Bottlenecks résolus
 - (aucun pour l'instant)

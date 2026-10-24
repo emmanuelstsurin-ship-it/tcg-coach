@@ -35,5 +35,11 @@
 - **Comptabilité** : Emmanuel ne sait pas s'il y a un expert-comptable ni si le 1er bilan annuel est sorti (2026-10-24)
 - **Outils** : Caisse SumUp ; appli « Caisse & Marge » (bilan, factures, stock, recettes)
 
+## Business annexe (en validation)
+- **Idée choisie le 2026-10-24** : outil de gestion (tableau de bord caisse + marge, type « Caisse & Marge ») pour restaurateurs et food trucks de Guadeloupe. En ligne, sans visage
+- **Prix de test** : 99 € d'installation + 29 €/mois
+- **Statut** : test de validation du 2026-10-24 au 2026-11-07 (seuil : 3 paiements). Plan : Output/2026-10-24_test-validation.md
+- **À confirmer** : Emmanuel a-t-il créé lui-même l'appli Caisse & Marge avec Claude ?
+
 ## Historique notable
 - ~2025 : ouverture du restaurant à Baillif, Guadeloupe (ouvert depuis plus d'1 an au 2026-10-24)
