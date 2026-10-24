@@ -15,8 +15,8 @@
 
 ## Ressources
 - **Temps disponible par semaine pour le business** : Ouvert du mardi au samedi, 9h-22h en continu (~65 h/semaine en cuisine). Lundi = jour des courses. Dimanche : fermé (à confirmer si temps libre). Soirées réservées à sa copine. Temps « sur » le business : quasi nul → chaque action doit tenir en créneaux de 15-30 min (heures creuses à identifier)
-- **Budget / cash disponible à investir** : 0 € dispo. Sur ses 900 €/mois, il met 500 € dans un « chetou » (probablement une tontine, à confirmer) → il lui reste 400 €/mois
-- **Charges perso** : loyer 750 €/mois ; courses faites avec le compte de l'entreprise (le strict minimum) ; mariage le 2027-07-21, salle ~6 000 € dont 1 000 € déjà versés → reste ~5 000 € (~555 €/mois d'ici juillet). Écart : 400 € restants < 750 € de loyer → comment il comble, à préciser
+- **Budget / cash disponible à investir** : 0 € dispo. Se verse 1 400 €/mois : 900 € pour vivre + 500 €/mois mis dans un « chetou » (tontine probable, à confirmer), auquel il ne touche pas
+- **Charges perso** : loyer 750 €/mois → il lui reste ~150 €/mois après loyer ; courses faites avec le compte de l'entreprise (le strict minimum) ; mariage le 2027-07-21, salle ~6 000 € dont 1 000 € versés → reste ~5 000 € (~555 €/mois d'ici juillet)
 - **Runway (combien de mois tu peux tenir)** : 0 — sans ventes, le resto coule immédiatement. ⚠️ Toute action doit être gratuite et rapporter du cash vite
 - **Réseau / audience existante** : (à compléter)
 

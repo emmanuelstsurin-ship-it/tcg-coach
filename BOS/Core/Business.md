@@ -26,12 +26,12 @@
 | Panier moyen | ~17 € | 2026-10-24 |
 | Coût d'acquisition client (CAC) | | |
 | Taux de rétention / churn | | |
-| Rémunérations associés | Emmanuel 900 €/mois + frère 500 €/mois = 1 400 €/mois (vs bénéfice estimé 4 514 €) → ~3 100 €/mois non expliqués | 2026-10-24 |
+| Rémunérations associés | Emmanuel 1 400 €/mois au total (900 € pour vivre + 500 € mis dans le chetou, non touchés). Frère : 500 €/mois « comme économie » d'après un message précédent, à confirmer (confusion possible avec les 500 € d'Emmanuel). Écart vs bénéfice estimé 4 514 € : ~2 600 à 3 100 €/mois non expliqués | 2026-10-24 |
 | Marge | Brute 74 % (11 515 €), EBE 5 546 €, bénéfice net 4 514 €/mois (28,9 %) selon simulateur. Point mort : 23 ventes/jour. Mais 0 € de côté → incohérence à creuser. ⚠️ Emmanuel N'A PAS ACCÈS au compte bancaire du resto | 2026-10-24 |
 
 ## Équipe & outils
-- **Structure** : Emmanuel est ASSOCIÉ (pas seul propriétaire). Associé = son frère, 51 % et président (contrôle le compte bancaire). Emmanuel : 49 %. Le frère a un autre emploi et un enfant en bas âge ; il fait le service mercredi, vendredi soir et samedi ; il se verse 500 €/mois « comme économie »
-- **Équipe** : Emmanuel (chef) + 1 employé. Emmanuel se verse ~900 €/mois (à préciser : 900 € pour lui seul, ou à partager avec l'employé ?)
+- **Structure** : Emmanuel est ASSOCIÉ (pas seul propriétaire). Associé = son frère, 51 % et président (contrôle le compte bancaire). Emmanuel : 49 %. Le frère a un autre emploi et un enfant en bas âge ; il fait le service mercredi, vendredi soir et samedi ; rémunération à confirmer (500 €/mois ?)
+- **Équipe** : Emmanuel (chef) + 1 employé. Emmanuel se verse 1 400 €/mois (900 + 500 de chetou)
 - **Comptabilité** : Emmanuel ne sait pas s'il y a un expert-comptable ni si le 1er bilan annuel est sorti (2026-10-24)
 - **Outils** : Caisse SumUp ; appli « Caisse & Marge » (bilan, factures, stock, recettes)
 

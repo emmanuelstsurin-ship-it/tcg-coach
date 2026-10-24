@@ -7,9 +7,9 @@
 ## 🎯 Bottleneck actuel
 - **Problème** : Aucune visibilité sur les vrais chiffres. Emmanuel n'a pas accès au compte bancaire, ne sait pas s'il y a un comptable ni un bilan, et l'argent ne remonte pas aux associés
 - **Maillon de la chaîne** : Modèle / gestion financière (pas le trafic : les ventes sont là)
-- **Preuve (chiffres)** : CA estimé ~15,6 k€ HT/mois, bénéfice estimé 4 514 €/mois (simulateur). Versé aux associés : 1 400 €/mois (900 + 500). Écart d'environ 3 100 €/mois non expliqué. Trésorerie perso : 0 €. Emmanuel est à ~3,50 €/h
+- **Preuve (chiffres)** : CA estimé ~15,6 k€ HT/mois, bénéfice estimé 4 514 €/mois (simulateur). Versé à Emmanuel : 1 400 €/mois (900 + 500 chetou) ; frère : 500 € ? (à confirmer). Écart de ~2 600 à 3 100 €/mois non expliqué. Trésorerie perso : 0 €. Emmanuel est à ~3,50 €/h
 - **Skill qui le traite** : diagnosis (version finance), puis chase/digestion selon ce qu'on trouve
-- **Critère de résolution** : Emmanuel a en main le bilan ou 3 mois de relevés, le contact du comptable, et un accès en lecture au compte ; on sait où vont les ~3 100 €/mois
+- **Critère de résolution** : Emmanuel a en main le bilan ou 3 mois de relevés, le contact du comptable, et un accès en lecture au compte ; on sait où va l'écart mensuel
 
 ## Autres problèmes (par impact décroissant)
 | # | Problème | Maillon | Impact (1-10) | Statut |

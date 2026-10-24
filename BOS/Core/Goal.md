@@ -1,11 +1,11 @@
 # Objectif
 
 ## L'objectif
-- **Objectif chiffré (90 jours)** : Se verser 1 500 €/mois (contre 900 € aujourd'hui)
+- **Objectif chiffré (90 jours)** : Se verser 1 500 €/mois pour vivre, hors chetou (aujourd'hui 900 € pour vivre + 500 € de chetou) — à reconfirmer avec Emmanuel
 - **Deadline** : 2027-01-31
 - **Échéance perso clé** : mariage le 2027-07-21 (reste ~5 000 € à payer pour la salle)
 - **Objectif 12 mois** : à définir
-- **Point de départ** : 900 €/mois pour ~65 h/semaine, au 2026-10-24
+- **Point de départ** : 1 400 €/mois (900 pour vivre + 500 chetou) pour ~65 h/semaine, au 2026-10-24
 
 ## Pourquoi
 - **Pourquoi cet objectif compte pour toi** : Faire du resto un tremplin pour ne plus travailler 13 h/jour
